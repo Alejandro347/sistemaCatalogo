@@ -6,6 +6,12 @@ db.sqlite3
 # Ignorar archivos de configuración local
 settings_local.py
 
+# Node modules
+node_modules/
+
+# Ignorar archivos y directorios generados por el entorno virtual
+static/CACHE
+
 # Ignorar archivos y directorios generados por el entorno virtual
 venv/
 .env
