@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <h1>Catalogo</h1>
+    <div style="display: flex; gap: 10px;">
+    {% for vehiculo in vehiculos %}
+    <div style="border: 1px solid black; padding: 10px;">
+        <h2>{{ vehiculo.marca }}</h2>
+        <p>{{ vehiculo.modelo }}</p>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}

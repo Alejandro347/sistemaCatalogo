@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Agregar nuevo vehiculo</h1>
+{{error}}
+<form action="/catalogo/listaVehiculos/" method="POST">
+    {% csrf_token %}
+    {{form}}
+
+    <button type='submit'>Save</button>
+</form>
+{% endblock content %}
