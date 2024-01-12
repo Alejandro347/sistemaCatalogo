@@ -15,7 +15,7 @@ Este es un proyecto de vacaciones realizado en Django para practicar el uso de e
 1. Clona el repositorio: 📥
 
 ```shell
-git clone https://github.com/ado1203/ExAulaHDP115Grupo11.git
+git clone https://github.com/Alejandro347/sistemaCatalogo.git
 ```
 
 2. Crea y activa un entorno virtual: ⚙️
@@ -60,10 +60,10 @@ python manage.py runserver
 
 Si deseas contribuir al proyecto, sigue los siguientes pasos: 🤝
 
-1. Crea una rama nueva desde la rama `develop`: 🌿
+1. Crea una rama nueva desde la rama `dev`: 🌿
 
 ```shell
-git checkout develop
+git checkout dev
 git pull
 git checkout -b feature/nombre_de_la_rama
 ```
@@ -75,10 +75,10 @@ git add .
 git commit -m "Mensaje descriptivo"
 ```
 
-3. Sincroniza tu rama con la rama `develop`: 🔄
+3. Sincroniza tu rama con la rama `dev`: 🔄
 
 ```shell
-git checkout develop
+git checkout dev
 git pull
 git merge nombre_de_la_rama
 ```
@@ -87,7 +87,7 @@ git merge nombre_de_la_rama
 5. Realiza un push de tus cambios a la rama remota: 📤
 
 ```shell
-git push origin develop
+git push origin dev
 ```
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
