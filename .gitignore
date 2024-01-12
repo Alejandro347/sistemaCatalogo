@@ -3,6 +3,7 @@
 __pycache__/
 db.sqlite3
 
+
 # Ignorar archivos de configuración local
 settings_local.py
 
