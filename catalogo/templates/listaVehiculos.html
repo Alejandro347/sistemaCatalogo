@@ -1,16 +1,17 @@
 
 {% extends "base.html" %}
 {% block content %}
-    <h1>Catalogo</h1>
-    <div style="display: flex; gap: 10px;">
+<h1 class="text-3xl font-bold mb-4">Catálogo</h1>
+<div class="flex gap-10">
     {% for vehiculo in vehiculos %}
-    <div style="border: 1px solid black; padding: 10px;">
-        <h2>{{ vehiculo.marca }}</h2>
-        <p>{{ vehiculo.modelo }}</p>
+    <div class="border border-black p-4">
+        <h2 class="text-xl font-semibold">{{ vehiculo.marca }}</h2>
+        <p class="text-gray-600">{{ vehiculo.modelo }}</p>
     </div>
     {% endfor %}
-    </div>
-    <div>
-        <a href="{% url 'crearVehiculo' %}">Crear vehiculo</a>
-    </div>
+</div>
+<div class="mt-4">
+    <a href="{% url 'crearVehiculo' %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Crear vehículo</a>
+</div>
+
 {% endblock %}

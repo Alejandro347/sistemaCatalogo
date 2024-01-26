@@ -6,16 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo de Renta de Vehiculos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a>Vehiculos</a></li>
-            <li><a>Clientes</a></li>
-            <li><a>Rentas</a></li>
+    <nav class="bg-gray-800">
+        <ul class="flex justify-center space-x-4">
+            <li>
+                <a href="{% url "listaVehiculos" %}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md block">Vehículos</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md block">Clientes</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md block">Rentas</a>
+            </li>
         </ul>
     </nav>
+    
     <div>
         {% block content %}
         {% endblock content %}

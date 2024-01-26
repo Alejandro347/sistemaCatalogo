@@ -4,8 +4,50 @@
 {{error}}
 <form action="{% url "crearVehiculo" %}" method="POST">
     {% csrf_token %}
-    {{form.as_p}}
-
-    <button type='submit'>Save</button>
+    <div class="grid grid-cols-2 gap-4">
+        <label for="marca" class="block text-gray-700">Marca</label>
+        <input type="text" name="marca" id="marca" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+    
+        <label for="modelo" class="block text-gray-700">Modelo</label>
+        <input type="text" name="modelo" id="modelo" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+    
+        <label for="categoria" class="block text-gray-700">Categoría</label>
+        <select name="categoria" id="categoria" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            <option value="Sedan">Sedan</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="SUV">SUV</option>
+            <option value="Minivan">Minivan</option>
+            <option value="Pickup">Pickup</option>
+            <option value="Deportivo">Deportivo</option>
+        </select>
+    
+        <label for="estado" class="block text-gray-700">Estado</label>
+        <select name="estado" id="estado" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            <option value="Nuevo">Nuevo</option>
+            <option value="Usado">Usado</option>
+        </select>
+    
+        <label for="disponibilidad" class="block text-gray-700">Disponibilidad</label>
+        <select name="disponibilidad" id="disponibilidad" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            <option value="Renta">Renta</option>
+            <option value="Venta">Venta</option>
+        </select>
+    
+        <label for="descripcion" class="block text-gray-700">Descripción</label>
+        <input type="text" name="descripcion" id="descripcion" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+    
+        <label for="transmision" class="block text-gray-700">Transmisión</label>
+        <select name="transmision" id="transmision" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            <option value="Manual">Manual</option>
+            <option value="Automática">Automática</option>
+        </select>
+    
+        <label for="kilometraje" class="block text-gray-700">Kilometraje</label>
+        <input type="number" name="kilometraje" id="kilometraje" required class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+    
+        <button type='submit' class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save</button>
+    </div>
+    
+    
 </form>
 {% endblock content %}
