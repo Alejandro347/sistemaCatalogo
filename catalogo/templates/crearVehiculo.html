@@ -2,9 +2,9 @@
 {% block content %}
 <h1>Agregar nuevo vehiculo</h1>
 {{error}}
-<form action="/catalogo/listaVehiculos/" method="POST">
+<form action="{% url "crearVehiculo" %}" method="POST">
     {% csrf_token %}
-    {{form}}
+    {{form.as_p}}
 
     <button type='submit'>Save</button>
 </form>

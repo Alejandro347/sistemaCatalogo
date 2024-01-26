@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from .models import Vehiculo, Factura
 from .forms import VehiculoForm
 
@@ -15,8 +15,7 @@ def crearVehiculo(request):
         if form.is_valid():
             nuevoVehiculo = form.save(commit=False)
             nuevoVehiculo.save()
-            print(nuevoVehiculo)
-            return redirect('listaVehiculos.html',
+            return redirect(reverse('listaVehiculos'),
                 {'form': form})
     else:
         form = VehiculoForm()
